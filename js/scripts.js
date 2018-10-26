@@ -1,4 +1,3 @@
-//Business Logic
 function checkNumber(UInput){
   var inputArray = UInput.split("");
   var remainder = UInput % 3 === 0;
@@ -16,12 +15,28 @@ function checkNumber(UInput){
     if (includesOne === true){
       newArray.push("Boop !");
     }else
+    if(UInput >= 0 && includeszero === false && includesOne === false && remainder === false)
+     {
+      optionFourResult=optionfour(UInput);
+      newArray.push(optionFourResult);
+    }else
     {
-      newArray.push(UInput)
+      newArray.push()
     }
+
     return newArray;
   }
-//user interface logic
+function optionfour(UInput)
+{
+  resultArray = [];
+  for(i=0; i<=UInput; i++)
+  {
+    resultFour=checkNumber(i);
+    resultArray.push(" " + resultFour);
+  }
+  return resultArray;
+}
+
 $(document).ready(function(){
   $("#formid").submit(function(event){
     event.preventDefault();
