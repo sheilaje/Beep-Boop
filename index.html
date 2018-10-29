@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Beep Boop</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>BeepBoop</h1>
-      <form id="formid">
-        <div class="form-group">
-          <label for="uinput">Enter a Number:</label>
-          <input id="uinput" type="text">
-        </div>
-        <button type="submit" class="btn">Find out!</button>
-      </form>
-      <div id="result">
-      </div>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Beep Boop</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>BeepBoop !!</h1>
+      <p>a web application that takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following exceptions:
+
+        Numbers that contain a 0 are replaced (all digits) with "Beep!"
+        Numbers that contain a 1 are replaced (all digits) with "Boop!"
+        Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."</p>
     </div>
-  </body>
+    <form id="formid">
+      <div class="form-group">
+        <label for="uinput">Enter a Number:</label>
+        <input id="uinput" type="text">
+        <input type="image" class ="btn-success" id="image" alt="Find out !!"
+        src="Images/searchIcon.jpg" />
+      </div>
+      <!-- <button type="submit" class="btn">Find out!</button> -->
+
+
+    </form>
+    <div class="panel panel-default">
+  <div class="panel-heading">The Beep Boop machine says...</div>
+  <div class="panel-body" id="result">
+
+  </div>
+</div>
+  </div>
+</body>
 </html>
